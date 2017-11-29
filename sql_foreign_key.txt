@@ -1,0 +1,6 @@
+ALTER TABLE 'absen'
+ADD CONSTRAINT 'fk_absen_semester' FOREIGN KEY('id_semester') REFERENCES 'semester' ('id_semester') ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT 'fk_absen_mahasiswa' FOREIGN KEY('nim') REFERENCES 'mahasiswa' ('nim') ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE 'mahasiswa'
+ADD CONSTRAINT 'fk_mahasiswa_kelas' FOREIGN KEY ('id_kelas') REFERENCES 'kelas' ('id_kelas') ON DELETE CASCADE ON UPDATE CASCADE;
